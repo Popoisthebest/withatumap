@@ -35,6 +35,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   syncfusion_flutter_maps: ^26.2.7
   proj4dart: ^2.1.0
+  geolocator: ^11.1.0
 
 dev_dependencies:
   flutter_test:

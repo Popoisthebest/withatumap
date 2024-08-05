@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_maps/maps.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:geolocator/geolocator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +33,7 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   List<MapLatLng> _dataPoints = [];
   List<Map<String, dynamic>> _properties = [];
+  MapLatLng? _currentLocation;
   late MapZoomPanBehavior _zoomPanBehavior;
 
   @override
@@ -39,6 +41,7 @@ class _MapPageState extends State<MapPage> {
     super.initState();
     _zoomPanBehavior = MapZoomPanBehavior();
     _loadGeoJson();
+    _getCurrentLocation();
   }
 
   Future<void> _loadGeoJson() async {
@@ -68,6 +71,38 @@ class _MapPageState extends State<MapPage> {
     });
   }
 
+  Future<void> _getCurrentLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    // 위치 서비스가 활성화되어 있는지 확인
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      // 위치 서비스가 활성화되지 않은 경우 처리
+      return;
+    }
+
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        // 권한이 거부된 경우 처리
+        return;
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      // 권한이 영구적으로 거부된 경우 처리
+      return;
+    }
+
+    // 현재 위치 가져오기
+    Position position = await Geolocator.getCurrentPosition();
+    setState(() {
+      _currentLocation = MapLatLng(position.latitude, position.longitude);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,22 +121,37 @@ class _MapPageState extends State<MapPage> {
                       urlTemplate:
                           'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                       zoomPanBehavior: _zoomPanBehavior,
-                      initialMarkersCount: _dataPoints.length,
+                      initialMarkersCount: _currentLocation != null
+                          ? _dataPoints.length + 1
+                          : _dataPoints.length,
                       markerBuilder: (BuildContext context, int index) {
-                        String tooltipMessage =
-                            _properties[index]['NAME'] ?? 'No Name';
-                        return MapMarker(
-                          latitude: _dataPoints[index].latitude,
-                          longitude: _dataPoints[index].longitude,
-                          child: Tooltip(
-                            message: tooltipMessage,
+                        if (_currentLocation != null &&
+                            index == _dataPoints.length) {
+                          return MapMarker(
+                            latitude: _currentLocation!.latitude,
+                            longitude: _currentLocation!.longitude,
                             child: const Icon(
-                              Icons.location_on,
-                              color: Colors.red,
-                              size: 24,
+                              Icons.my_location,
+                              color: Colors.blue,
+                              size: 30,
                             ),
-                          ),
-                        );
+                          );
+                        } else {
+                          String tooltipMessage =
+                              _properties[index]['NAME'] ?? 'No Name';
+                          return MapMarker(
+                            latitude: _dataPoints[index].latitude,
+                            longitude: _dataPoints[index].longitude,
+                            child: Tooltip(
+                              message: tooltipMessage,
+                              child: const Icon(
+                                Icons.location_on,
+                                color: Colors.red,
+                                size: 24,
+                              ),
+                            ),
+                          );
+                        }
                       },
                     ),
                   ],
