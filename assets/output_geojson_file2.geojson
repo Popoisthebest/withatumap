@@ -1,0 +1,2570 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.52998306875568,
+                    35.726411365582734
+                ]
+            },
+            "properties": {
+                "ID": "20201011",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2020",
+                "GRP2_NM": "\ubd80\uc548\uc11c",
+                "DEPART_NM": "\uac00\ub825\ub3c4\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.46772044035862,
+                    35.62235152283059
+                ]
+            },
+            "properties": {
+                "ID": "20201022",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2020",
+                "GRP2_NM": "\ubd80\uc548\uc11c",
+                "DEPART_NM": "\uaca9\ud3ec\ud56d",
+                "SHIP_CNT": "25"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.3028883082971,
+                    35.61852849997271
+                ]
+            },
+            "properties": {
+                "ID": "20201041",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2020",
+                "GRP2_NM": "\ubd80\uc548\uc11c",
+                "DEPART_NM": "\uc704\ub3c4\ud56d",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.60570631031507,
+                    35.58576641427217
+                ]
+            },
+            "properties": {
+                "ID": "20201061",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2020",
+                "GRP2_NM": "\ubd80\uc548\uc11c",
+                "DEPART_NM": "\uacf0\uc18c\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.42568346977714,
+                    35.449503531730784
+                ]
+            },
+            "properties": {
+                "ID": "20201062",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2020",
+                "GRP2_NM": "\ubd80\uc548\uc11c",
+                "DEPART_NM": "\uad6c\uc2dc\ud3ec\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.37139023919062,
+                    37.12938998333573
+                ]
+            },
+            "properties": {
+                "ID": "40203011",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\ub098\uace1\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.42239486733519,
+                    37.056258280412315
+                ]
+            },
+            "properties": {
+                "ID": "40203012",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\uc8fd\ubcc0\ud56d",
+                "SHIP_CNT": "15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4166667,
+                    36.8925
+                ]
+            },
+            "properties": {
+                "ID": "40203031",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\uc624\uc0b0\ud56d",
+                "SHIP_CNT": "8"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.47110590202382,
+                    36.75856252789032
+                ]
+            },
+            "properties": {
+                "ID": "40203043",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\uad6c\uc0b0\ud56d",
+                "SHIP_CNT": "4"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4573203300367,
+                    36.6772396106082
+                ]
+            },
+            "properties": {
+                "ID": "40203052",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\ud6c4\ud3ec\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4319882537744,
+                    36.557809911802245
+                ]
+            },
+            "properties": {
+                "ID": "40203062",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\ub300\uc9c4\ud56d",
+                "SHIP_CNT": "9"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4479515,
+                    36.50995566
+                ]
+            },
+            "properties": {
+                "ID": "40203061",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\ucd95\uc0b0\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.390191,
+                    36.35919371
+                ]
+            },
+            "properties": {
+                "ID": "40203072",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\uac15\uad6c\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4261756256129,
+                    36.40534046643236
+                ]
+            },
+            "properties": {
+                "ID": "40203071",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4020",
+                "GRP2_NM": "\uc6b8\uc9c4\uc11c",
+                "DEPART_NM": "\ub178\ubb3c\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.6873279464207,
+                    34.909849668074045
+                ]
+            },
+            "properties": {
+                "ID": "20503011",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2050",
+                "GRP2_NM": "\uc5ec\uc218\uc11c",
+                "DEPART_NM": "\uad11\uc591\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.72697626523963,
+                    34.727924046406685
+                ]
+            },
+            "properties": {
+                "ID": "20503021",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2050",
+                "GRP2_NM": "\uc5ec\uc218\uc11c",
+                "DEPART_NM": "\uad6d\ub3d9\ud56d",
+                "SHIP_CNT": "111"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.72195144903323,
+                    34.61329031683411
+                ]
+            },
+            "properties": {
+                "ID": "20503032",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2050",
+                "GRP2_NM": "\uc5ec\uc218\uc11c",
+                "DEPART_NM": "\ub3cc\uc0b0\ud56d",
+                "SHIP_CNT": "13"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.14211942145471,
+                    34.52273110252733
+                ]
+            },
+            "properties": {
+                "ID": "20503061",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2050",
+                "GRP2_NM": "\uc5ec\uc218\uc11c",
+                "DEPART_NM": "\ub179\ub3d9\ud56d",
+                "SHIP_CNT": "64"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.45270792873399,
+                    34.465556163003555
+                ]
+            },
+            "properties": {
+                "ID": "20503082",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2050",
+                "GRP2_NM": "\uc5ec\uc218\uc11c",
+                "DEPART_NM": "\ub098\ub85c\ub3c4\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4296347754123,
+                    35.48433009901196
+                ]
+            },
+            "properties": {
+                "ID": "30403021",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\ubc29\uc5b4\uc9c4\ud56d",
+                "SHIP_CNT": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.35816309592104,
+                    35.43911945558603
+                ]
+            },
+            "properties": {
+                "ID": "30403031",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uc628\uc0b0\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.3481653006657,
+                    35.46800538136748
+                ]
+            },
+            "properties": {
+                "ID": "30403022",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uc131\uc678\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.34431589344385,
+                    35.38961547852373
+                ]
+            },
+            "properties": {
+                "ID": "30403041",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uac15\uc591\ud56d",
+                "SHIP_CNT": "3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.34224049811542,
+                    35.35475986594721
+                ]
+            },
+            "properties": {
+                "ID": "30403042",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\ub098\uc0ac\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.32508394683794,
+                    35.347230322221286
+                ]
+            },
+            "properties": {
+                "ID": "30403052",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uc2e0\uc554\ud56d",
+                "SHIP_CNT": "3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.2777033734098,
+                    35.32561833065799
+                ]
+            },
+            "properties": {
+                "ID": "30403061",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uc6d4\ub0b4\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.2459854502762,
+                    35.257938577077894
+                ]
+            },
+            "properties": {
+                "ID": "30403062",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\ud559\ub9ac\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.22913483820582,
+                    35.22460783646174
+                ]
+            },
+            "properties": {
+                "ID": "30403063",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\ub300\ubcc0\ud56d",
+                "SHIP_CNT": "3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.45044771569576,
+                    35.617245376017195
+                ]
+            },
+            "properties": {
+                "ID": "30403011",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uc815\uc790\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.45822515133167,
+                    35.585106426161246
+                ]
+            },
+            "properties": {
+                "ID": "30403012",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\ub2f9\uc0ac\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.31937279205826,
+                    35.342909754845216
+                ]
+            },
+            "properties": {
+                "ID": "30403044",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3040",
+                "GRP2_NM": "\uc6b8\uc0b0\uc11c",
+                "DEPART_NM": "\uc2e0\ub9ac\ud56d",
+                "SHIP_CNT": "4"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.40686950675489,
+                    35.39119736827039
+                ]
+            },
+            "properties": {
+                "ID": "20303011",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2030",
+                "GRP2_NM": "\ubaa9\ud3ec\uc11c",
+                "DEPART_NM": "\uacc4\ub9c8\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.20372872872935,
+                    35.04221710782174
+                ]
+            },
+            "properties": {
+                "ID": "20303041",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2030",
+                "GRP2_NM": "\ubaa9\ud3ec\uc11c",
+                "DEPART_NM": "\uace1\uc9c0(\ud640\ud1b5)\uc120\ucc29\uc7a5",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.36249354962828,
+                    34.803492754856556
+                ]
+            },
+            "properties": {
+                "ID": "20303051",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2030",
+                "GRP2_NM": "\ubaa9\ud3ec\uc11c",
+                "DEPART_NM": "\ubaa9\ud3ec\ubd81\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.22627525596279,
+                    34.847992189883364
+                ]
+            },
+            "properties": {
+                "ID": "20303081",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2030",
+                "GRP2_NM": "\ubaa9\ud3ec\uc11c",
+                "DEPART_NM": "\uc1a1\uacf5\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    125.93419249114193,
+                    34.72027545422485
+                ]
+            },
+            "properties": {
+                "ID": "20303091",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2030",
+                "GRP2_NM": "\ubaa9\ud3ec\uc11c",
+                "DEPART_NM": "\uc218\ub300\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.13589454227652,
+                    34.36644001014049
+                ]
+            },
+            "properties": {
+                "ID": "203030101",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2030",
+                "GRP2_NM": "\ubaa9\ud3ec\uc11c",
+                "DEPART_NM": "\uc11c\ub9dd\ud56d",
+                "SHIP_CNT": "30"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.16523912756074,
+                    33.31034165621976
+                ]
+            },
+            "properties": {
+                "ID": "50103011",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\uace0\uc0b0\ud3ec\uad6c",
+                "SHIP_CNT": "29"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.25556025368662,
+                    33.41450714339619
+                ]
+            },
+            "properties": {
+                "ID": "50103021",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\ud55c\ub9bc\ud56d",
+                "SHIP_CNT": "10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.3248867567231,
+                    33.46917454643744
+                ]
+            },
+            "properties": {
+                "ID": "50103031",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\uc560\uc6d4\ud56d",
+                "SHIP_CNT": "12"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.54116964100673,
+                    33.526484941487695
+                ]
+            },
+            "properties": {
+                "ID": "50103061",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\uc81c\uc8fc\ud56d",
+                "SHIP_CNT": "14"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.4649231438889,
+                    33.50757975426479
+                ]
+            },
+            "properties": {
+                "ID": "50103051",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\ub3c4\ub450\ud56d",
+                "SHIP_CNT": "36"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.73740538369725,
+                    33.55888312718526
+                ]
+            },
+            "properties": {
+                "ID": "50103071",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\uae40\ub155\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.85648836900735,
+                    33.52905980765412
+                ]
+            },
+            "properties": {
+                "ID": "50103081",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\uc138\ud654\ud3ec\uad6c",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.29641365133729,
+                    33.962037954332956
+                ]
+            },
+            "properties": {
+                "ID": "501030111",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5010",
+                "GRP2_NM": "\uc81c\uc8fc\uc11c",
+                "DEPART_NM": "\ucd94\uc790\ud56d",
+                "SHIP_CNT": "10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.87458063629037,
+                    34.9474092586219
+                ]
+            },
+            "properties": {
+                "ID": "30503011",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3050",
+                "GRP2_NM": "\uc0ac\ucc9c\uc11c",
+                "DEPART_NM": "\ub178\ub7c9\ud56d",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.0801085462054,
+                    34.926050876939506
+                ]
+            },
+            "properties": {
+                "ID": "30503021",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3050",
+                "GRP2_NM": "\uc0ac\ucc9c\uc11c",
+                "DEPART_NM": "\uc0ac\ucc9c\uc9c4\ud56d",
+                "SHIP_CNT": "167"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.04628399152827,
+                    34.70816801440929
+                ]
+            },
+            "properties": {
+                "ID": "30503071",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3050",
+                "GRP2_NM": "\uc0ac\ucc9c\uc11c",
+                "DEPART_NM": "\ubbf8\uc870\ud56d",
+                "SHIP_CNT": "33"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.5004208047525,
+                    36.1581953974082
+                ]
+            },
+            "properties": {
+                "ID": "104030111",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1040",
+                "GRP2_NM": "\ubcf4\ub839\uc11c",
+                "DEPART_NM": "\ud64d\uc6d0\ud56d",
+                "SHIP_CNT": "77"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.4677731376913,
+                    36.53475453943114
+                ]
+            },
+            "properties": {
+                "ID": "10403011",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1040",
+                "GRP2_NM": "\ubcf4\ub839\uc11c",
+                "DEPART_NM": "\ub0a8\ub2f9\ud56d",
+                "SHIP_CNT": "28"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.51963276466685,
+                    36.43931153359432
+                ]
+            },
+            "properties": {
+                "ID": "10403012",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1040",
+                "GRP2_NM": "\ubcf4\ub839\uc11c",
+                "DEPART_NM": "\uc624\ucc9c\ud56d",
+                "SHIP_CNT": "119"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.51177067024238,
+                    36.32837678031364
+                ]
+            },
+            "properties": {
+                "ID": "10403031",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1040",
+                "GRP2_NM": "\ubcf4\ub839\uc11c",
+                "DEPART_NM": "\ub300\ucc9c\ud56d",
+                "SHIP_CNT": "72"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.380903,
+                    37.70069800000001
+                ]
+            },
+            "properties": {
+                "ID": "10103011",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1010",
+                "GRP2_NM": "\uc778\ucc9c\uc11c",
+                "DEPART_NM": "\uc678\ud3ec\ub9ac\uc120\ucc29\uc7a5",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.42542400000002,
+                    37.422076999999994
+                ]
+            },
+            "properties": {
+                "ID": "10103021",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1010",
+                "GRP2_NM": "\uc778\ucc9c\uc11c",
+                "DEPART_NM": "\uac70\uc7a0\ud3ec\uc120\ucc29\uc7a5",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.59371063321366,
+                    37.45510136964437
+                ]
+            },
+            "properties": {
+                "ID": "10103032",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1010",
+                "GRP2_NM": "\uc778\ucc9c\uc11c",
+                "DEPART_NM": "\uc778\ucc9c\uc5f0\uc548\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.6879354,
+                    37.34527354000001
+                ]
+            },
+            "properties": {
+                "ID": "10103041",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1010",
+                "GRP2_NM": "\uc778\ucc9c\uc11c",
+                "DEPART_NM": "\uc624\uc774\ub3c4\ud56d",
+                "SHIP_CNT": "15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.8763564469369,
+                    37.83609961605083
+                ]
+            },
+            "properties": {
+                "ID": "40303011",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\uc0ac\ucc9c\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.95333330000003,
+                    37.77083333
+                ]
+            },
+            "properties": {
+                "ID": "40303021",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\uac15\ub989\ud56d",
+                "SHIP_CNT": "14"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.11455838913457,
+                    37.54572846859832
+                ]
+            },
+            "properties": {
+                "ID": "40303031",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\ubb35\ud638\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.19206156835082,
+                    37.435318185623885
+                ]
+            },
+            "properties": {
+                "ID": "40303041",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\uc0bc\ucc99\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.31634196458472,
+                    37.287706432931365
+                ]
+            },
+            "properties": {
+                "ID": "40303061",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\uc7a5\ud638\ud56d",
+                "SHIP_CNT": "24"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.34403970886558,
+                    37.22941455329714
+                ]
+            },
+            "properties": {
+                "ID": "40303071",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\uc784\uc6d0\ud56d",
+                "SHIP_CNT": "13"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    130.9110499750818,
+                    37.494733072671615
+                ]
+            },
+            "properties": {
+                "ID": "40303081",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4030",
+                "GRP2_NM": "\ub3d9\ud574\uc11c",
+                "DEPART_NM": "\uc800\ub3d9\ud56d",
+                "SHIP_CNT": "4"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.8947356672624,
+                    35.116679291708586
+                ]
+            },
+            "properties": {
+                "ID": "30303011",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\ub179\uc0b0\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.97928833072856,
+                    35.05655446549748
+                ]
+            },
+            "properties": {
+                "ID": "30303021",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\ub2e4\ub300\ud3ec\ud56d",
+                "SHIP_CNT": "35"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.04309388426273,
+                    35.10274035762033
+                ]
+            },
+            "properties": {
+                "ID": "30303022",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\ubd80\uc0b0\ub0a8\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.0818486983884,
+                    35.071267183731926
+                ]
+            },
+            "properties": {
+                "ID": "30303023",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\ud558\ub9ac\uc120\ucc29\uc7a5",
+                "SHIP_CNT": "21"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.0007051559554,
+                    35.07971871136515
+                ]
+            },
+            "properties": {
+                "ID": "30303041",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\uac10\ucc9c\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.13123684029566,
+                    35.154020748227204
+                ]
+            },
+            "properties": {
+                "ID": "30303061",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\ubbfc\ub77d\uc120\ucc29\uc7a5",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.19184082520863,
+                    35.16026227694967
+                ]
+            },
+            "properties": {
+                "ID": "30303071",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\uccad\uc0ac\ud3ec\uc5b4\ud56d",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.20693806670633,
+                    35.18057210021186
+                ]
+            },
+            "properties": {
+                "ID": "30303072",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3030",
+                "GRP2_NM": "\ubd80\uc0b0\uc11c",
+                "DEPART_NM": "\uc1a1\uc815\ud56d",
+                "SHIP_CNT": "10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.37546660932867,
+                    36.260292801213886
+                ]
+            },
+            "properties": {
+                "ID": "40103011",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\uc9c0\uacbd\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.43621395241857,
+                    36.11206468932506
+                ]
+            },
+            "properties": {
+                "ID": "40103021",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\uc601\uc77c\ub9cc\ud56d",
+                "SHIP_CNT": "18"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.37972267212623,
+                    36.04851996108605
+                ]
+            },
+            "properties": {
+                "ID": "40103041",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\ud3ec\ud56d\uad6c\ud56d",
+                "SHIP_CNT": "20"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.5615727044709,
+                    36.07870580602065
+                ]
+            },
+            "properties": {
+                "ID": "40103052",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\ud638\ubbf8\uacf6\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.55608124140284,
+                    35.988874188910614
+                ]
+            },
+            "properties": {
+                "ID": "40103061",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\uad6c\ub8e1\ud3ec\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.52348379233266,
+                    35.87955424918514
+                ]
+            },
+            "properties": {
+                "ID": "40103062",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\uc591\ud3ec\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.50651075242604,
+                    35.8068967577079
+                ]
+            },
+            "properties": {
+                "ID": "40103082",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\uac10\ud3ec\ud56d",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    129.4761431369576,
+                    35.69119297177277
+                ]
+            },
+            "properties": {
+                "ID": "40103092",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4010",
+                "GRP2_NM": "\ud3ec\ud56d\uc11c",
+                "DEPART_NM": "\uc74d\ucc9c\ud56d",
+                "SHIP_CNT": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.50441147162624,
+                    35.09885643769023
+                ]
+            },
+            "properties": {
+                "ID": "30203011",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "3020",
+                "GRP2_NM": "\ucc3d\uc6d0\uc11c",
+                "DEPART_NM": "\uad11\uc554\ud56d",
+                "SHIP_CNT": "24"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.69712954658982,
+                    35.12780143214003
+                ]
+            },
+            "properties": {
+                "ID": "30203041",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "3020",
+                "GRP2_NM": "\ucc3d\uc6d0\uc11c",
+                "DEPART_NM": "\uc9c4\ud574\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.7928048165715,
+                    35.07070946294181
+                ]
+            },
+            "properties": {
+                "ID": "30203052",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "3020",
+                "GRP2_NM": "\ucc3d\uc6d0\uc11c",
+                "DEPART_NM": "\uc9c4\ud574\uc2e0\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.81098831153716,
+                    35.036058706331225
+                ]
+            },
+            "properties": {
+                "ID": "30203062",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "3020",
+                "GRP2_NM": "\ucc3d\uc6d0\uc11c",
+                "DEPART_NM": "\ucc9c\uc131\ud56d",
+                "SHIP_CNT": "14"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.82364039614424,
+                    35.01207500180795
+                ]
+            },
+            "properties": {
+                "ID": "30203063",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "3020",
+                "GRP2_NM": "\ucc3d\uc6d0\uc11c",
+                "DEPART_NM": "\ub300\ud56d\ud56d",
+                "SHIP_CNT": "15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.82210409832801,
+                    34.448757410783394
+                ]
+            },
+            "properties": {
+                "ID": "20402011",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2040",
+                "GRP2_NM": "\uc644\ub3c4\uc11c",
+                "DEPART_NM": "\ub9c8\ub7c9\ud56d",
+                "SHIP_CNT": "13"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.94183340004665,
+                    34.48034183396598
+                ]
+            },
+            "properties": {
+                "ID": "20402041",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2040",
+                "GRP2_NM": "\uc644\ub3c4\uc11c",
+                "DEPART_NM": "\ud68c\uc9c4\ud56d",
+                "SHIP_CNT": "42"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.75865657561751,
+                    34.315796823076916
+                ]
+            },
+            "properties": {
+                "ID": "20402051",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2040",
+                "GRP2_NM": "\uc644\ub3c4\uc11c",
+                "DEPART_NM": "\uc644\ub3c4\ud56d",
+                "SHIP_CNT": "76"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.52984990718748,
+                    34.29993755966657
+                ]
+            },
+            "properties": {
+                "ID": "20402061",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2040",
+                "GRP2_NM": "\uc644\ub3c4\uc11c",
+                "DEPART_NM": "\ub545\ub05d\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.60597081466331,
+                    34.31661301134129
+                ]
+            },
+            "properties": {
+                "ID": "20402071",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2040",
+                "GRP2_NM": "\uc644\ub3c4\uc11c",
+                "DEPART_NM": "\ub0a8\uc131\ud56d",
+                "SHIP_CNT": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.47450017355656,
+                    34.34902056993531
+                ]
+            },
+            "properties": {
+                "ID": "20402091",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2040",
+                "GRP2_NM": "\uc644\ub3c4\uc11c",
+                "DEPART_NM": "\uc5b4\ub780\uc9c4\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.52989365881064,
+                    35.93769962340547
+                ]
+            },
+            "properties": {
+                "ID": "20103011",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2010",
+                "GRP2_NM": "\uad70\uc0b0\uc11c",
+                "DEPART_NM": "\ube44\uc751\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.47566604299566,
+                    35.823374922851706
+                ]
+            },
+            "properties": {
+                "ID": "20103042",
+                "GRP1_CD": "20",
+                "GRP1_NM": "\uc11c\ud574\uccad",
+                "GRP2_CD": "2010",
+                "GRP2_NM": "\uad70\uc0b0\uc11c",
+                "DEPART_NM": "\uc2e0\uc2dc\ub3c4\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.32062687804964,
+                    34.958953038085966
+                ]
+            },
+            "properties": {
+                "ID": "30103041",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\ub0a8\ud3ec\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.61507717143508,
+                    34.89646075740456
+                ]
+            },
+            "properties": {
+                "ID": "30103061",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\uace0\ud604\ud56d",
+                "SHIP_CNT": "8"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.4184525281134,
+                    34.83952428356992
+                ]
+            },
+            "properties": {
+                "ID": "30103091",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\ud1b5\uc601\ud56d",
+                "SHIP_CNT": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.57979423278647,
+                    34.8412678298685
+                ]
+            },
+            "properties": {
+                "ID": "301030111",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\uc8fd\ub9bc\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.51779802469466,
+                    34.810961682730124
+                ]
+            },
+            "properties": {
+                "ID": "301030121",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\uc544\uc9c0\ub791\ud56d",
+                "SHIP_CNT": "3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.58524749467261,
+                    34.715820646303435
+                ]
+            },
+            "properties": {
+                "ID": "301030151",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\ub300\ud3ec\ud56d",
+                "SHIP_CNT": "39"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.6963843638942,
+                    34.804370440981195
+                ]
+            },
+            "properties": {
+                "ID": "301030171",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\uad6c\uc870\ub77c\ud56d",
+                "SHIP_CNT": "18"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.7289828039553,
+                    34.86682224419945
+                ]
+            },
+            "properties": {
+                "ID": "301030181",
+                "GRP1_CD": "30",
+                "GRP1_NM": "\ub0a8\ud574\uccad",
+                "GRP2_CD": "3010",
+                "GRP2_NM": "\ud1b5\uc601\uc11c",
+                "DEPART_NM": "\uc7a5\uc2b9\ud3ec\ud56d",
+                "SHIP_CNT": "20"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.4604686222023,
+                    38.44677244935025
+                ]
+            },
+            "properties": {
+                "ID": "40404011",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4040",
+                "GRP2_NM": "\uc18d\ucd08\uc11c",
+                "DEPART_NM": "\uac70\uc9c4\ud56d",
+                "SHIP_CNT": "13"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.51315284461907,
+                    38.35682296061606
+                ]
+            },
+            "properties": {
+                "ID": "40404031",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4040",
+                "GRP2_NM": "\uc18d\ucd08\uc11c",
+                "DEPART_NM": "\uacf5\ud604\uc9c4\ud56d",
+                "SHIP_CNT": "17"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.55050287898706,
+                    38.294976674227605
+                ]
+            },
+            "properties": {
+                "ID": "40404041",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4040",
+                "GRP2_NM": "\uc18d\ucd08\uc11c",
+                "DEPART_NM": "\ubb38\uc554\ud56d",
+                "SHIP_CNT": "10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.59956628353805,
+                    38.209460658881376
+                ]
+            },
+            "properties": {
+                "ID": "40404051",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4040",
+                "GRP2_NM": "\uc18d\ucd08\uc11c",
+                "DEPART_NM": "\uc18d\ucd08\ud56d",
+                "SHIP_CNT": "8"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.6331663243376,
+                    38.12302728675784
+                ]
+            },
+            "properties": {
+                "ID": "40404071",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4040",
+                "GRP2_NM": "\uc18d\ucd08\uc11c",
+                "DEPART_NM": "\ub099\uc0b0\ud56d",
+                "SHIP_CNT": "17"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    128.83142758393262,
+                    37.893946674689566
+                ]
+            },
+            "properties": {
+                "ID": "40404091",
+                "GRP1_CD": "40",
+                "GRP1_NM": "\ub3d9\ud574\uccad",
+                "GRP2_CD": "4040",
+                "GRP2_NM": "\uc18d\ucd08\uc11c",
+                "DEPART_NM": "\uc8fc\ubb38\uc9c4\ud56d",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.45185994058996,
+                    37.007097099768416
+                ]
+            },
+            "properties": {
+                "ID": "10203011",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\uc0bc\uae38\ud3ec\ud56d",
+                "SHIP_CNT": "18"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.45976730844204,
+                    37.01724888368241
+                ]
+            },
+            "properties": {
+                "ID": "10203012",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\ub3c4\ube44\ub3c4\ud56d",
+                "SHIP_CNT": "16"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.64673084650916,
+                    37.19024583096916
+                ]
+            },
+            "properties": {
+                "ID": "10203031",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\ud0c4\ub3c4\ud56d",
+                "SHIP_CNT": "7"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.64924155835564,
+                    37.18646051348594
+                ]
+            },
+            "properties": {
+                "ID": "10203032",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\uc804\uace1\ud56d",
+                "SHIP_CNT": "22"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.52903174118413,
+                    37.048666595723496
+                ]
+            },
+            "properties": {
+                "ID": "10203033",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\uc65c\ubaa9\ud56d",
+                "SHIP_CNT": "15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.67555041556649,
+                    37.11582462196708
+                ]
+            },
+            "properties": {
+                "ID": "10203044",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\uad81\ud3c9\ud56d",
+                "SHIP_CNT": "16"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.56614772793115,
+                    37.0354543872856
+                ]
+            },
+            "properties": {
+                "ID": "10203045",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\uc7a5\uace0\ud56d",
+                "SHIP_CNT": "65"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.84273508440961,
+                    36.95556409139698
+                ]
+            },
+            "properties": {
+                "ID": "10203062",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\ud3c9\ud0dd\ud56d\ub9cc",
+                "SHIP_CNT": "9"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.74732571490685,
+                    36.987011341323395
+                ]
+            },
+            "properties": {
+                "ID": "10203073",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1020",
+                "GRP2_NM": "\ud3c9\ud0dd\uc11c",
+                "DEPART_NM": "\ud55c\uc9c4\ud3ec\uad6c",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.25066213080751,
+                    33.216111301123334
+                ]
+            },
+            "properties": {
+                "ID": "50202011",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\uc6b4\uc9c4\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.2578088283873,
+                    33.20867530128398
+                ]
+            },
+            "properties": {
+                "ID": "50202031",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\uc6b4\uc9c4\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.33241626799027,
+                    33.237552753115104
+                ]
+            },
+            "properties": {
+                "ID": "50202041",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\uc0ac\uacc4\ud56d",
+                "SHIP_CNT": "15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.3614955092774,
+                    33.23657014395846
+                ]
+            },
+            "properties": {
+                "ID": "50202051",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ud654\uc21c\ud56d",
+                "SHIP_CNT": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.43861616681838,
+                    33.23867261828973
+                ]
+            },
+            "properties": {
+                "ID": "50202061",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ub300\ud3ec\ud3ec\uad6c",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.51631187010652,
+                    33.237013804925596
+                ]
+            },
+            "properties": {
+                "ID": "50202071",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ubc95\ud658\ud56d",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.56681542366992,
+                    33.2372733305583
+                ]
+            },
+            "properties": {
+                "ID": "50202081",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\uc11c\uadc0\ud3ec\ud56d",
+                "SHIP_CNT": "14"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.60783190018711,
+                    33.2386408290764
+                ]
+            },
+            "properties": {
+                "ID": "50202092",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ubcf4\ubaa9\ud56d",
+                "SHIP_CNT": "4"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.71937694444509,
+                    33.27710497495494
+                ]
+            },
+            "properties": {
+                "ID": "502020111",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ub0a8\uc6d0\ud56d",
+                "SHIP_CNT": "2"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.84494705052298,
+                    33.32589163440236
+                ]
+            },
+            "properties": {
+                "ID": "502020121",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ud45c\uc120\ud56d",
+                "SHIP_CNT": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.94171788752756,
+                    33.50885044482304
+                ]
+            },
+            "properties": {
+                "ID": "502020141",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ud558\uc6b0\ubaa9\ub3d9\ud56d",
+                "SHIP_CNT": "1"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.66032264058754,
+                    33.27202804102352
+                ]
+            },
+            "properties": {
+                "ID": "50202091",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\uc704\ubbf8\ud56d",
+                "SHIP_CNT": "11"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.62083469437316,
+                    33.24860005671517
+                ]
+            },
+            "properties": {
+                "ID": "502020103",
+                "GRP1_CD": "50",
+                "GRP1_NM": "\uc81c\uc8fc\uccad",
+                "GRP2_CD": "5020",
+                "GRP2_NM": "\uc11c\uadc0\ud3ec\uc11c",
+                "DEPART_NM": "\ud558\ud6a8\ud56d",
+                "SHIP_CNT": "5"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.20617460000001,
+                    36.90192652
+                ]
+            },
+            "properties": {
+                "ID": "10303011",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\ud559\uc554\ud3ec\ud56d",
+                "SHIP_CNT": "12"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.1317119,
+                    36.77621749
+                ]
+            },
+            "properties": {
+                "ID": "10303021",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\ubaa8\ud56d\ud56d",
+                "SHIP_CNT": "12"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.13663529999998,
+                    36.67546802999999
+                ]
+            },
+            "properties": {
+                "ID": "10303031",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\uc2e0\uc9c4\ud56d(\uc804\uc6a9\ubd80\ub450)",
+                "SHIP_CNT": "6"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.28561687246162,
+                    36.62239466845504
+                ]
+            },
+            "properties": {
+                "ID": "10303052",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\ub9c8\uac80\ud3ec\ud56d",
+                "SHIP_CNT": "27"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.33633579889904,
+                    36.50420088447828
+                ]
+            },
+            "properties": {
+                "ID": "10303062",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\ubc29\ud3ec\ud56d",
+                "SHIP_CNT": "22"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.35598499483827,
+                    36.62155671289434
+                ]
+            },
+            "properties": {
+                "ID": "10303063",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\ub2f9\uc554\ud3ec\uad6c",
+                "SHIP_CNT": "19"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    126.31444541350444,
+                    36.58945037646041
+                ]
+            },
+            "properties": {
+                "ID": "10301032",
+                "GRP1_CD": "10",
+                "GRP1_NM": "\uc911\ubd80\uccad",
+                "GRP2_CD": "1030",
+                "GRP2_NM": "\ud0dc\uc548\uc11c",
+                "DEPART_NM": "\ubc31\uc0ac\uc7a5\ud56d",
+                "SHIP_CNT": "6"
+            }
+        }
+    ]
+}
