@@ -39,6 +39,8 @@ class _MapPageState extends State<MapPage> {
   late MapZoomPanBehavior _zoomPanBehavior;
   bool _isLoading = true;
   final TextEditingController _searchController = TextEditingController();
+  List<String> _allSuggestions = [];
+  final List<String> _filteredSuggestions = [];
 
   @override
   void initState() {
@@ -59,6 +61,10 @@ class _MapPageState extends State<MapPage> {
       _loadGeoJson2(),
     ]);
     await _getCurrentLocation();
+    _allSuggestions = [
+      ..._properties1.map((e) => e['name'] ?? 'No Name'),
+      ..._properties2.map((e) => e['DEPART_NM'] ?? 'No Name'),
+    ];
     setState(() {
       _isLoading = false;
     });
@@ -160,17 +166,38 @@ class _MapPageState extends State<MapPage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              controller: _searchController,
-              decoration: InputDecoration(
-                labelText: 'Search Location',
-                suffixIcon: IconButton(
-                  icon: const Icon(Icons.search),
-                  onPressed: () {
-                    _searchLocation(_searchController.text);
-                  },
-                ),
-              ),
+            child: Autocomplete<String>(
+              optionsBuilder: (TextEditingValue textEditingValue) {
+                if (textEditingValue.text.isEmpty) {
+                  return const Iterable<String>.empty();
+                } else {
+                  return _allSuggestions.where((String option) {
+                    return option
+                        .toLowerCase()
+                        .contains(textEditingValue.text.toLowerCase());
+                  });
+                }
+              },
+              onSelected: (String selection) {
+                _searchController.text = selection;
+                _searchLocation(selection);
+              },
+              fieldViewBuilder:
+                  (context, controller, focusNode, onFieldSubmitted) {
+                return TextField(
+                  controller: controller,
+                  focusNode: focusNode,
+                  decoration: InputDecoration(
+                    labelText: 'Search Location',
+                    suffixIcon: IconButton(
+                      icon: const Icon(Icons.search),
+                      onPressed: () {
+                        _searchLocation(controller.text);
+                      },
+                    ),
+                  ),
+                );
+              },
             ),
           ),
           Expanded(
