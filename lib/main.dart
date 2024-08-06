@@ -135,6 +135,7 @@ class _MapPageState extends State<MapPage> {
   }
 
   void _searchLocation(String query) {
+    FocusScope.of(context).unfocus(); // 가상 키보드 내리기
     for (int i = 0; i < _properties1.length; i++) {
       if (_properties1[i]['name'] == query) {
         _zoomPanBehavior.focalLatLng = _dataPoints1[i];
@@ -196,6 +197,9 @@ class _MapPageState extends State<MapPage> {
                       },
                     ),
                   ),
+                  onSubmitted: (String value) {
+                    _searchLocation(value);
+                  },
                 );
               },
             ),
@@ -287,6 +291,7 @@ class _MapPageState extends State<MapPage> {
               child: const Text('Close'),
               onPressed: () {
                 Navigator.of(context).pop();
+                FocusScope.of(context).unfocus(); // 가상 키보드 내리기
               },
             ),
           ],
