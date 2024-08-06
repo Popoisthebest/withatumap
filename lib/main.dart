@@ -31,22 +31,42 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
-  List<MapLatLng> _dataPoints = [];
-  List<Map<String, dynamic>> _properties = [];
+  List<MapLatLng> _dataPoints1 = [];
+  List<Map<String, dynamic>> _properties1 = [];
+  List<MapLatLng> _dataPoints2 = [];
+  List<Map<String, dynamic>> _properties2 = [];
   MapLatLng? _currentLocation;
   late MapZoomPanBehavior _zoomPanBehavior;
+  bool _isLoading = true;
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior();
-    _loadGeoJson();
-    _getCurrentLocation();
+    _zoomPanBehavior = MapZoomPanBehavior(
+      enableDoubleTapZooming: true,
+      enablePanning: true,
+      enablePinching: true,
+      maxZoomLevel: 30,
+      minZoomLevel: 1,
+    );
+    _initializeData();
   }
 
-  Future<void> _loadGeoJson() async {
+  Future<void> _initializeData() async {
+    await Future.wait([
+      _loadGeoJson1(),
+      _loadGeoJson2(),
+    ]);
+    await _getCurrentLocation();
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
+  Future<void> _loadGeoJson1() async {
     final String response =
-        await rootBundle.loadString('assets/output_geojson_file2.geojson');
+        await rootBundle.loadString('assets/police.geojson');
     final data = json.decode(response);
     final List<MapLatLng> points = [];
     final List<Map<String, dynamic>> properties = [];
@@ -59,26 +79,34 @@ class _MapPageState extends State<MapPage> {
       }
     }
 
-    setState(() {
-      _dataPoints = points;
-      _properties = properties;
-      _zoomPanBehavior = MapZoomPanBehavior(
-        focalLatLng: _dataPoints.isNotEmpty
-            ? _dataPoints[0]
-            : const MapLatLng(35.0, 127.0),
-        zoomLevel: 3,
-      );
-    });
+    _dataPoints1 = points;
+    _properties1 = properties;
+  }
+
+  Future<void> _loadGeoJson2() async {
+    final String response = await rootBundle.loadString('assets/ship.geojson');
+    final data = json.decode(response);
+    final List<MapLatLng> points = [];
+    final List<Map<String, dynamic>> properties = [];
+
+    for (var feature in data['features']) {
+      if (feature['geometry']['type'] == 'Point') {
+        var coordinates = feature['geometry']['coordinates'];
+        points.add(MapLatLng(coordinates[1], coordinates[0]));
+        properties.add(feature['properties']);
+      }
+    }
+
+    _dataPoints2 = points;
+    _properties2 = properties;
   }
 
   Future<void> _getCurrentLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
 
-    // 위치 서비스가 활성화되어 있는지 확인
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      // 위치 서비스가 활성화되지 않은 경우 처리
       return;
     }
 
@@ -86,21 +114,40 @@ class _MapPageState extends State<MapPage> {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        // 권한이 거부된 경우 처리
         return;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      // 권한이 영구적으로 거부된 경우 처리
       return;
     }
 
-    // 현재 위치 가져오기
     Position position = await Geolocator.getCurrentPosition();
     setState(() {
       _currentLocation = MapLatLng(position.latitude, position.longitude);
     });
+  }
+
+  void _searchLocation(String query) {
+    for (int i = 0; i < _properties1.length; i++) {
+      if (_properties1[i]['name'] == query) {
+        _zoomPanBehavior.focalLatLng = _dataPoints1[i];
+        _zoomPanBehavior.zoomLevel = 15;
+        return;
+      }
+    }
+
+    for (int i = 0; i < _properties2.length; i++) {
+      if (_properties2[i]['DEPART_NM'] == query) {
+        _zoomPanBehavior.focalLatLng = _dataPoints2[i];
+        _zoomPanBehavior.zoomLevel = 15;
+        return;
+      }
+    }
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Location not found')),
+    );
   }
 
   @override
@@ -109,55 +156,115 @@ class _MapPageState extends State<MapPage> {
       appBar: AppBar(
         title: const Text('Flutter GeoJSON Map'),
       ),
-      body: Center(
-        child: SizedBox(
-          width: 500,
-          height: 500,
-          child: _dataPoints.isEmpty
-              ? const Center(child: CircularProgressIndicator())
-              : SfMaps(
-                  layers: [
-                    MapTileLayer(
-                      urlTemplate:
-                          'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                      zoomPanBehavior: _zoomPanBehavior,
-                      initialMarkersCount: _currentLocation != null
-                          ? _dataPoints.length + 1
-                          : _dataPoints.length,
-                      markerBuilder: (BuildContext context, int index) {
-                        if (_currentLocation != null &&
-                            index == _dataPoints.length) {
-                          return MapMarker(
-                            latitude: _currentLocation!.latitude,
-                            longitude: _currentLocation!.longitude,
-                            child: const Icon(
-                              Icons.my_location,
-                              color: Colors.blue,
-                              size: 30,
-                            ),
-                          );
-                        } else {
-                          String tooltipMessage =
-                              _properties[index]['NAME'] ?? 'No Name';
-                          return MapMarker(
-                            latitude: _dataPoints[index].latitude,
-                            longitude: _dataPoints[index].longitude,
-                            child: Tooltip(
-                              message: tooltipMessage,
-                              child: const Icon(
-                                Icons.location_on,
-                                color: Colors.red,
-                                size: 24,
-                              ),
-                            ),
-                          );
-                        }
-                      },
-                    ),
-                  ],
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _searchController,
+              decoration: InputDecoration(
+                labelText: 'Search Location',
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.search),
+                  onPressed: () {
+                    _searchLocation(_searchController.text);
+                  },
                 ),
-        ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: _isLoading
+                  ? const CircularProgressIndicator()
+                  : SfMaps(
+                      layers: [
+                        MapTileLayer(
+                          urlTemplate:
+                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                          zoomPanBehavior: _zoomPanBehavior,
+                          initialMarkersCount: (_currentLocation != null
+                              ? _dataPoints1.length + _dataPoints2.length + 1
+                              : _dataPoints1.length + _dataPoints2.length),
+                          markerBuilder: (BuildContext context, int index) {
+                            if (_currentLocation != null &&
+                                index ==
+                                    _dataPoints1.length + _dataPoints2.length) {
+                              return MapMarker(
+                                latitude: _currentLocation!.latitude,
+                                longitude: _currentLocation!.longitude,
+                                child: const Icon(
+                                  Icons.my_location,
+                                  color: Colors.blue,
+                                  size: 30,
+                                ),
+                              );
+                            } else if (index < _dataPoints1.length) {
+                              String tooltipMessage =
+                                  _properties1[index]['name'] ?? 'No Name';
+                              return MapMarker(
+                                latitude: _dataPoints1[index].latitude,
+                                longitude: _dataPoints1[index].longitude,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    _showMarkerInfo(context, tooltipMessage);
+                                  },
+                                  child: const Icon(
+                                    Icons.location_on,
+                                    color: Colors.red,
+                                    size: 24,
+                                  ),
+                                ),
+                              );
+                            } else {
+                              int adjustedIndex = index - _dataPoints1.length;
+                              String tooltipMessage =
+                                  _properties2[adjustedIndex]['DEPART_NM'] ??
+                                      'No Name';
+                              return MapMarker(
+                                latitude: _dataPoints2[adjustedIndex].latitude,
+                                longitude:
+                                    _dataPoints2[adjustedIndex].longitude,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    _showMarkerInfo(context, tooltipMessage);
+                                  },
+                                  child: const Icon(
+                                    Icons.location_on,
+                                    color: Colors.green,
+                                    size: 24,
+                                  ),
+                                ),
+                              );
+                            }
+                          },
+                        ),
+                      ],
+                    ),
+            ),
+          ),
+        ],
       ),
+    );
+  }
+
+  void _showMarkerInfo(BuildContext context, String info) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Marker Info'),
+          content: Text(info),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Close'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }

@@ -90,6 +90,7 @@
 				4C60F2B65A1BD1E85E848E9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		97C146EF1CF9000F007C117D /* Products */ = {
 			isa = PBXGroup;
@@ -121,7 +122,6 @@
 				B7A29241E951B25D3D5EA505 /* Pods-Runner.release.xcconfig */,
 				D432E622F3BC04B4CF65C069 /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
