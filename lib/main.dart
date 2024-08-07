@@ -38,6 +38,8 @@ class _MapPageState extends State<MapPage> {
   List<Map<String, dynamic>> _properties2 = [];
   List<MapLatLng> _dataPoints3 = [];
   List<Map<String, dynamic>> _properties3 = [];
+  List<MapLatLng> _dataPoints4 = [];
+  List<Map<String, dynamic>> _properties4 = [];
   MapLatLng? _currentLocation;
   late MapZoomPanBehavior _zoomPanBehavior;
   bool _isLoading = true;
@@ -64,12 +66,14 @@ class _MapPageState extends State<MapPage> {
       _loadGeoJson1(),
       _loadGeoJson2(),
       _loadGeoJson3(),
+      _loadGeoJson4(),
     ]);
     await _getCurrentLocation();
     _allSuggestions = [
       ..._properties1.map((e) => e['NAME'] ?? 'No Name'),
       ..._properties2.map((e) => e['DEPART_NM'] ?? 'No Name'),
       ..._properties3.map((e) => e['업소명'] ?? 'No Name'),
+      ..._properties4.map((e) => e['업소명'] ?? 'No Name'),
     ];
     setState(() {
       _isLoading = false;
@@ -148,6 +152,31 @@ class _MapPageState extends State<MapPage> {
     });
   }
 
+  Future<void> _loadGeoJson4() async {
+    final String response =
+        await rootBundle.loadString('assets/datas/namhaS.geojson');
+    final dataString = response.replaceAll('NaN', 'null');
+    final data = json.decode(dataString);
+    final List<MapLatLng> points = [];
+    final List<Map<String, dynamic>> properties = [];
+
+    for (var feature in data['features']) {
+      if (feature['geometry']['type'] == 'Point') {
+        var coordinates = feature['geometry']['coordinates'];
+        points.add(MapLatLng(
+          coordinates[1].toDouble(),
+          coordinates[0].toDouble(),
+        ));
+        properties.add(feature['properties']);
+      }
+    }
+
+    setState(() {
+      _dataPoints4 = points;
+      _properties4 = properties;
+    });
+  }
+
   Future<void> _getCurrentLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
@@ -196,6 +225,14 @@ class _MapPageState extends State<MapPage> {
     for (int i = 0; i < _properties3.length; i++) {
       if (_properties3[i]['업소명'] == query) {
         _zoomPanBehavior.focalLatLng = _dataPoints3[i];
+        _zoomPanBehavior.zoomLevel = 15;
+        return;
+      }
+    }
+
+    for (int i = 0; i < _properties4.length; i++) {
+      if (_properties4[i]['업소명'] == query) {
+        _zoomPanBehavior.focalLatLng = _dataPoints4[i];
         _zoomPanBehavior.zoomLevel = 15;
         return;
       }
@@ -271,16 +308,19 @@ class _MapPageState extends State<MapPage> {
                                   ? _dataPoints1.length +
                                       _dataPoints2.length +
                                       _dataPoints3.length +
+                                      _dataPoints4.length +
                                       1
                                   : _dataPoints1.length +
                                       _dataPoints2.length +
-                                      _dataPoints3.length),
+                                      _dataPoints3.length +
+                                      _dataPoints4.length),
                               markerBuilder: (BuildContext context, int index) {
                                 if (_currentLocation != null &&
                                     index ==
                                         _dataPoints1.length +
                                             _dataPoints2.length +
-                                            _dataPoints3.length) {
+                                            _dataPoints3.length +
+                                            _dataPoints4.length) {
                                   return MapMarker(
                                     latitude: _currentLocation!.latitude,
                                     longitude: _currentLocation!.longitude,
@@ -327,7 +367,10 @@ class _MapPageState extends State<MapPage> {
                                       ),
                                     ),
                                   );
-                                } else {
+                                } else if (index <
+                                    _dataPoints1.length +
+                                        _dataPoints2.length +
+                                        _dataPoints3.length) {
                                   int adjustedIndex = index -
                                       _dataPoints1.length -
                                       _dataPoints2.length;
@@ -348,6 +391,28 @@ class _MapPageState extends State<MapPage> {
                                       ),
                                     ),
                                   );
+                                } else {
+                                  int adjustedIndex = index -
+                                      _dataPoints1.length -
+                                      _dataPoints2.length -
+                                      _dataPoints3.length;
+                                  return MapMarker(
+                                    latitude:
+                                        _dataPoints4[adjustedIndex].latitude,
+                                    longitude:
+                                        _dataPoints4[adjustedIndex].longitude,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        _showMarkerInfo(context,
+                                            _properties4[adjustedIndex], false);
+                                      },
+                                      child: Image.asset(
+                                        'assets/icons/namhaSicon.png',
+                                        width: 24,
+                                        height: 24,
+                                      ),
+                                    ),
+                                  );
                                 }
                               },
                             ),
@@ -363,16 +428,20 @@ class _MapPageState extends State<MapPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 LegendItem(
-                                  color: Colors.red,
+                                  iconPath: 'assets/icons/policeicon2.png',
                                   text: '해양경찰서 데이터',
                                 ),
                                 LegendItem(
-                                  color: Colors.green,
+                                  iconPath: 'assets/icons/shipicon2.png',
                                   text: '항구 데이터',
                                 ),
                                 LegendItem(
-                                  color: Colors.blue,
+                                  iconPath: 'assets/icons/namhaHicon.png',
                                   text: '남해병원 데이터',
+                                ),
+                                LegendItem(
+                                  iconPath: 'assets/icons/namhaSicon.png',
+                                  text: '숙박 데이터',
                                 ),
                               ],
                             ),
@@ -432,20 +501,20 @@ class _MapPageState extends State<MapPage> {
 }
 
 class LegendItem extends StatelessWidget {
-  final Color color;
+  final String iconPath;
   final String text;
 
-  const LegendItem({required this.color, required this.text, Key? key})
+  const LegendItem({required this.iconPath, required this.text, Key? key})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 16,
-          height: 16,
-          color: color,
+        Image.asset(
+          iconPath,
+          width: 24,
+          height: 24,
         ),
         const SizedBox(width: 8),
         Text(text),
