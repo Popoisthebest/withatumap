@@ -46,6 +46,8 @@ class _MapPageState extends State<MapPage> {
   void initState() {
     super.initState();
     _zoomPanBehavior = MapZoomPanBehavior(
+      focalLatLng: const MapLatLng(36.5, 127.5), // 대한민국 중심 좌표 설정
+      zoomLevel: 7, // 적절한 줌 레벨 설정
       enableDoubleTapZooming: true,
       enablePanning: true,
       enablePinching: true,
@@ -213,6 +215,9 @@ class _MapPageState extends State<MapPage> {
                         SfMaps(
                           layers: [
                             MapTileLayer(
+                              initialFocalLatLng:
+                                  const MapLatLng(36.5, 127.5), // 대한민국 중심 좌표 설정
+                              initialZoomLevel: 7,
                               urlTemplate:
                                   'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                               zoomPanBehavior: _zoomPanBehavior,
