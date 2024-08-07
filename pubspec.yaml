@@ -58,13 +58,15 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/hospital.geojson
-    - assets/police.geojson
-    - assets/ship.geojson
-    - assets/seaPolice.geojson
-    - assets/yourlocation.png
-    - assets/policeicon2.png
-    - assets/shipicon2.png
+    - assets/datas/hospital.geojson
+    - assets/datas/police.geojson
+    - assets/datas/ship.geojson
+    - assets/datas/seaPolice.geojson
+    - assets/datas/namhaHData.geojson
+    - assets/icons/yourlocation.png
+    - assets/icons/policeicon2.png
+    - assets/icons/shipicon2.png
+    - assets/icons/namhaHicon.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
