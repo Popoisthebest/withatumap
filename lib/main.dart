@@ -3,6 +3,7 @@ import 'package:syncfusion_flutter_maps/maps.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:geolocator/geolocator.dart';
+import 'dart:async';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +41,6 @@ class _MapPageState extends State<MapPage> {
   bool _isLoading = true;
   final TextEditingController _searchController = TextEditingController();
   List<String> _allSuggestions = [];
-  final List<String> _filteredSuggestions = [];
 
   @override
   void initState() {
@@ -87,8 +87,10 @@ class _MapPageState extends State<MapPage> {
       }
     }
 
-    _dataPoints1 = points;
-    _properties1 = properties;
+    setState(() {
+      _dataPoints1 = points;
+      _properties1 = properties;
+    });
   }
 
   Future<void> _loadGeoJson2() async {
@@ -105,8 +107,10 @@ class _MapPageState extends State<MapPage> {
       }
     }
 
-    _dataPoints2 = points;
-    _properties2 = properties;
+    setState(() {
+      _dataPoints2 = points;
+      _properties2 = properties;
+    });
   }
 
   Future<void> _getCurrentLocation() async {
@@ -234,15 +238,13 @@ class _MapPageState extends State<MapPage> {
                                   return MapMarker(
                                     latitude: _currentLocation!.latitude,
                                     longitude: _currentLocation!.longitude,
-                                    child: const Icon(
-                                      Icons.my_location,
-                                      color: Colors.blue,
-                                      size: 30,
+                                    child: Image.asset(
+                                      'assets/yourlocation.png', // 여기에 사용하고자 하는 아이콘의 경로를 넣으세요.
+                                      width: 30,
+                                      height: 30,
                                     ),
                                   );
                                 } else if (index < _dataPoints1.length) {
-                                  String tooltipMessage =
-                                      _properties1[index]['NAME'] ?? 'No Name';
                                   return MapMarker(
                                     latitude: _dataPoints1[index].latitude,
                                     longitude: _dataPoints1[index].longitude,
@@ -251,20 +253,16 @@ class _MapPageState extends State<MapPage> {
                                         _showMarkerInfo(
                                             context, _properties1[index], true);
                                       },
-                                      child: const Icon(
-                                        Icons.location_on,
-                                        color: Colors.red,
-                                        size: 24,
+                                      child: Image.asset(
+                                        'assets/policeicon2.png', // 여기에 사용하고자 하는 아이콘의 경로를 넣으세요.
+                                        width: 24,
+                                        height: 24,
                                       ),
                                     ),
                                   );
                                 } else {
                                   int adjustedIndex =
                                       index - _dataPoints1.length;
-                                  String tooltipMessage =
-                                      _properties2[adjustedIndex]
-                                              ['DEPART_NM'] ??
-                                          'No Name';
                                   return MapMarker(
                                     latitude:
                                         _dataPoints2[adjustedIndex].latitude,
@@ -275,10 +273,10 @@ class _MapPageState extends State<MapPage> {
                                         _showMarkerInfo(context,
                                             _properties2[adjustedIndex], false);
                                       },
-                                      child: const Icon(
-                                        Icons.location_on,
-                                        color: Colors.green,
-                                        size: 24,
+                                      child: Image.asset(
+                                        'assets/shipicon2.png', // 여기에 사용하고자 하는 아이콘의 경로를 넣으세요.
+                                        width: 24,
+                                        height: 24,
                                       ),
                                     ),
                                   );
