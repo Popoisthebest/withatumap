@@ -249,7 +249,7 @@ class _MapPageState extends State<MapPage> {
                                     child: GestureDetector(
                                       onTap: () {
                                         _showMarkerInfo(
-                                            context, _properties1[index]);
+                                            context, _properties1[index], true);
                                       },
                                       child: const Icon(
                                         Icons.location_on,
@@ -273,7 +273,7 @@ class _MapPageState extends State<MapPage> {
                                     child: GestureDetector(
                                       onTap: () {
                                         _showMarkerInfo(context,
-                                            _properties2[adjustedIndex]);
+                                            _properties2[adjustedIndex], false);
                                       },
                                       child: const Icon(
                                         Icons.location_on,
@@ -317,7 +317,8 @@ class _MapPageState extends State<MapPage> {
     );
   }
 
-  void _showMarkerInfo(BuildContext context, Map<String, dynamic> properties) {
+  void _showMarkerInfo(
+      BuildContext context, Map<String, dynamic> properties, bool isSeaPolice) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -328,7 +329,13 @@ class _MapPageState extends State<MapPage> {
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: properties.entries.map((entry) {
+            children: properties.entries.where((entry) {
+              if (isSeaPolice) {
+                return entry.key == 'RNADRES';
+              } else {
+                return entry.key == 'SHIP_CNT' || entry.key == 'DEPART_NM';
+              }
+            }).map((entry) {
               return Text('${entry.key}: ${entry.value}');
             }).toList(),
           ),
