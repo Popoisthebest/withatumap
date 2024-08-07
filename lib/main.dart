@@ -62,7 +62,7 @@ class _MapPageState extends State<MapPage> {
     ]);
     await _getCurrentLocation();
     _allSuggestions = [
-      ..._properties1.map((e) => e['name'] ?? 'No Name'),
+      ..._properties1.map((e) => e['NAME'] ?? 'No Name'),
       ..._properties2.map((e) => e['DEPART_NM'] ?? 'No Name'),
     ];
     setState(() {
@@ -72,7 +72,7 @@ class _MapPageState extends State<MapPage> {
 
   Future<void> _loadGeoJson1() async {
     final String response =
-        await rootBundle.loadString('assets/police.geojson');
+        await rootBundle.loadString('assets/seaPolice.geojson');
     final data = json.decode(response);
     final List<MapLatLng> points = [];
     final List<Map<String, dynamic>> properties = [];
@@ -137,7 +137,7 @@ class _MapPageState extends State<MapPage> {
   void _searchLocation(String query) {
     FocusScope.of(context).unfocus(); // 가상 키보드 내리기
     for (int i = 0; i < _properties1.length; i++) {
-      if (_properties1[i]['name'] == query) {
+      if (_properties1[i]['NAME'] == query) {
         _zoomPanBehavior.focalLatLng = _dataPoints1[i];
         _zoomPanBehavior.zoomLevel = 15;
         return;
@@ -208,67 +208,100 @@ class _MapPageState extends State<MapPage> {
             child: Center(
               child: _isLoading
                   ? const CircularProgressIndicator()
-                  : SfMaps(
-                      layers: [
-                        MapTileLayer(
-                          urlTemplate:
-                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                          zoomPanBehavior: _zoomPanBehavior,
-                          initialMarkersCount: (_currentLocation != null
-                              ? _dataPoints1.length + _dataPoints2.length + 1
-                              : _dataPoints1.length + _dataPoints2.length),
-                          markerBuilder: (BuildContext context, int index) {
-                            if (_currentLocation != null &&
-                                index ==
-                                    _dataPoints1.length + _dataPoints2.length) {
-                              return MapMarker(
-                                latitude: _currentLocation!.latitude,
-                                longitude: _currentLocation!.longitude,
-                                child: const Icon(
-                                  Icons.my_location,
-                                  color: Colors.blue,
-                                  size: 30,
+                  : Stack(
+                      children: [
+                        SfMaps(
+                          layers: [
+                            MapTileLayer(
+                              urlTemplate:
+                                  'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                              zoomPanBehavior: _zoomPanBehavior,
+                              initialMarkersCount: (_currentLocation != null
+                                  ? _dataPoints1.length +
+                                      _dataPoints2.length +
+                                      1
+                                  : _dataPoints1.length + _dataPoints2.length),
+                              markerBuilder: (BuildContext context, int index) {
+                                if (_currentLocation != null &&
+                                    index ==
+                                        _dataPoints1.length +
+                                            _dataPoints2.length) {
+                                  return MapMarker(
+                                    latitude: _currentLocation!.latitude,
+                                    longitude: _currentLocation!.longitude,
+                                    child: const Icon(
+                                      Icons.my_location,
+                                      color: Colors.blue,
+                                      size: 30,
+                                    ),
+                                  );
+                                } else if (index < _dataPoints1.length) {
+                                  String tooltipMessage =
+                                      _properties1[index]['NAME'] ?? 'No Name';
+                                  return MapMarker(
+                                    latitude: _dataPoints1[index].latitude,
+                                    longitude: _dataPoints1[index].longitude,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        _showMarkerInfo(
+                                            context, _properties1[index]);
+                                      },
+                                      child: const Icon(
+                                        Icons.location_on,
+                                        color: Colors.red,
+                                        size: 24,
+                                      ),
+                                    ),
+                                  );
+                                } else {
+                                  int adjustedIndex =
+                                      index - _dataPoints1.length;
+                                  String tooltipMessage =
+                                      _properties2[adjustedIndex]
+                                              ['DEPART_NM'] ??
+                                          'No Name';
+                                  return MapMarker(
+                                    latitude:
+                                        _dataPoints2[adjustedIndex].latitude,
+                                    longitude:
+                                        _dataPoints2[adjustedIndex].longitude,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        _showMarkerInfo(context,
+                                            _properties2[adjustedIndex]);
+                                      },
+                                      child: const Icon(
+                                        Icons.location_on,
+                                        color: Colors.green,
+                                        size: 24,
+                                      ),
+                                    ),
+                                  );
+                                }
+                              },
+                            ),
+                          ],
+                        ),
+                        Positioned(
+                          top: 10,
+                          right: 10,
+                          child: Container(
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(8.0),
+                            child: const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                LegendItem(
+                                  color: Colors.red,
+                                  text: '해양경찰서 데이터',
                                 ),
-                              );
-                            } else if (index < _dataPoints1.length) {
-                              String tooltipMessage =
-                                  _properties1[index]['name'] ?? 'No Name';
-                              return MapMarker(
-                                latitude: _dataPoints1[index].latitude,
-                                longitude: _dataPoints1[index].longitude,
-                                child: GestureDetector(
-                                  onTap: () {
-                                    _showMarkerInfo(context, tooltipMessage);
-                                  },
-                                  child: const Icon(
-                                    Icons.location_on,
-                                    color: Colors.red,
-                                    size: 24,
-                                  ),
+                                LegendItem(
+                                  color: Colors.green,
+                                  text: '항구 데이터',
                                 ),
-                              );
-                            } else {
-                              int adjustedIndex = index - _dataPoints1.length;
-                              String tooltipMessage =
-                                  _properties2[adjustedIndex]['DEPART_NM'] ??
-                                      'No Name';
-                              return MapMarker(
-                                latitude: _dataPoints2[adjustedIndex].latitude,
-                                longitude:
-                                    _dataPoints2[adjustedIndex].longitude,
-                                child: GestureDetector(
-                                  onTap: () {
-                                    _showMarkerInfo(context, tooltipMessage);
-                                  },
-                                  child: const Icon(
-                                    Icons.location_on,
-                                    color: Colors.green,
-                                    size: 24,
-                                  ),
-                                ),
-                              );
-                            }
-                          },
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -279,13 +312,21 @@ class _MapPageState extends State<MapPage> {
     );
   }
 
-  void _showMarkerInfo(BuildContext context, String info) {
+  void _showMarkerInfo(BuildContext context, Map<String, dynamic> properties) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Marker Info'),
-          content: Text(info),
+          title: Text(
+            properties['NAME'] ?? properties['DEPART_NM'] ?? 'Marker Info',
+          ),
+          content: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: properties.entries.map((entry) {
+              return Text('${entry.key}: ${entry.value}');
+            }).toList(),
+          ),
           actions: <Widget>[
             TextButton(
               child: const Text('Close'),
@@ -297,6 +338,29 @@ class _MapPageState extends State<MapPage> {
           ],
         );
       },
+    );
+  }
+}
+
+class LegendItem extends StatelessWidget {
+  final Color color;
+  final String text;
+
+  const LegendItem({required this.color, required this.text, Key? key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          width: 16,
+          height: 16,
+          color: color,
+        ),
+        const SizedBox(width: 8),
+        Text(text),
+      ],
     );
   }
 }
