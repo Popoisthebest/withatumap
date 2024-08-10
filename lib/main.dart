@@ -267,7 +267,6 @@ class _MapPageState extends State<MapPage> {
           _showAccommodationData = value ?? false;
           break;
       }
-      _initializeData(); // Re-initialize data whenever a checkbox is toggled
     });
   }
 
@@ -394,15 +393,8 @@ class _MapPageState extends State<MapPage> {
                                   'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                               zoomPanBehavior: _zoomPanBehavior,
                               initialMarkersCount: (_currentLocation != null
-                                  ? _dataPoints1.length +
-                                      _dataPoints2.length +
-                                      _dataPoints3.length +
-                                      _dataPoints4.length +
-                                      1
-                                  : _dataPoints1.length +
-                                      _dataPoints2.length +
-                                      _dataPoints3.length +
-                                      _dataPoints4.length),
+                                  ? _getTotalDataPointCount() + 1
+                                  : _getTotalDataPointCount()),
                               markerBuilder: (BuildContext context, int index) {
                                 int seaPoliceCount =
                                     _showSeaPolice ? _dataPoints1.length : 0;
@@ -440,8 +432,8 @@ class _MapPageState extends State<MapPage> {
                                     longitude: _dataPoints1[index].longitude,
                                     child: GestureDetector(
                                       onTap: () {
-                                        _showMarkerInfo(
-                                            context, _properties1[index], true);
+                                        _showMarkerInfo(context,
+                                            _properties1[index], 'seaPolice');
                                       },
                                       child: Image.asset(
                                         'assets/icons/policeicon2.png',
@@ -463,8 +455,10 @@ class _MapPageState extends State<MapPage> {
                                         _dataPoints2[adjustedIndex].longitude,
                                     child: GestureDetector(
                                       onTap: () {
-                                        _showMarkerInfo(context,
-                                            _properties2[adjustedIndex], false);
+                                        _showMarkerInfo(
+                                            context,
+                                            _properties2[adjustedIndex],
+                                            'ship');
                                       },
                                       child: Image.asset(
                                         'assets/icons/shipicon2.png',
@@ -489,8 +483,10 @@ class _MapPageState extends State<MapPage> {
                                         _dataPoints3[adjustedIndex].longitude,
                                     child: GestureDetector(
                                       onTap: () {
-                                        _showMarkerInfo(context,
-                                            _properties3[adjustedIndex], false);
+                                        _showMarkerInfo(
+                                            context,
+                                            _properties3[adjustedIndex],
+                                            'hospital');
                                       },
                                       child: Image.asset(
                                         'assets/icons/namhaHicon.png',
@@ -518,8 +514,10 @@ class _MapPageState extends State<MapPage> {
                                         _dataPoints4[adjustedIndex].longitude,
                                     child: GestureDetector(
                                       onTap: () {
-                                        _showMarkerInfo(context,
-                                            _properties4[adjustedIndex], false);
+                                        _showMarkerInfo(
+                                            context,
+                                            _properties4[adjustedIndex],
+                                            'accommodation');
                                       },
                                       child: Image.asset(
                                         'assets/icons/namhaSicon.png',
@@ -577,34 +575,64 @@ class _MapPageState extends State<MapPage> {
     );
   }
 
+  int _getTotalDataPointCount() {
+    int totalCount = 0;
+    if (_showSeaPolice) totalCount += _dataPoints1.length;
+    if (_showShipData) totalCount += _dataPoints2.length;
+    if (_showHospitalData) totalCount += _dataPoints3.length;
+    if (_showAccommodationData) totalCount += _dataPoints4.length;
+    return totalCount;
+  }
+
   void _showMarkerInfo(
-      BuildContext context, Map<String, dynamic> properties, bool isSeaPolice) {
+      BuildContext context, Map<String, dynamic> properties, String type) {
+    List<Widget> infoWidgets = [];
+
+    String cleanValue(String? value) {
+      if (value == null ||
+          value.trim().isEmpty ||
+          value == 'N/A' ||
+          value == "NaN" ||
+          value == "\n") {
+        return '제공되지 않음';
+      }
+      return value;
+    }
+
+    if (type == 'seaPolice') {
+      infoWidgets.add(Text('주소: ${cleanValue(properties['RNADRES'])}'));
+    } else if (type == 'ship') {
+      infoWidgets.add(Text('배 갯수: ${cleanValue(properties['SHIP_CNT'])}'));
+    } else if (type == 'hospital') {
+      infoWidgets.add(Text('전화번호: ${cleanValue(properties['전화번호'])}'));
+      infoWidgets.add(Text('주소: ${cleanValue(properties['주소'])}'));
+      infoWidgets.add(Text('토요일 시작 시간: ${cleanValue(properties['토요일시작시간'])}'));
+      infoWidgets.add(Text('토요일 종료 시간: ${cleanValue(properties['토요일종료시간'])}'));
+      infoWidgets.add(Text('공휴일 시작 시간: ${cleanValue(properties['공휴일시작시간'])}'));
+      infoWidgets.add(Text('공휴일 종료 시간: ${cleanValue(properties['공휴일종료시간'])}'));
+      infoWidgets.add(Text('평일 시작 시간: ${cleanValue(properties['평일시작시간'])}'));
+      infoWidgets.add(Text('평일 종료 시간: ${cleanValue(properties['평일종료시간'])}'));
+      infoWidgets.add(Text('응급실 여부: ${cleanValue(properties['비고'])}'));
+    } else if (type == 'accommodation') {
+      infoWidgets.add(Text('전화번호: ${cleanValue(properties['전화번호'])}'));
+      infoWidgets.add(Text('주소: ${cleanValue(properties['주소'])}'));
+      infoWidgets.add(Text('주차장 여부: ${cleanValue(properties['주차장여부'])}'));
+      infoWidgets.add(Text('주차 대수: ${cleanValue(properties['주차대수'])}'));
+      infoWidgets.add(Text('애완동물 동행여부: ${cleanValue(properties['애완동물동행여부'])}'));
+    }
+
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(
-            properties['NAME'] ??
-                properties['DEPART_NM'] ??
-                properties['업소명'] ??
-                'Marker Info',
-          ),
+          title: Text(properties['NAME'] ??
+              properties['DEPART_NM'] ??
+              properties['업소명'] ??
+              'Marker Info'),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: properties.entries.where((entry) {
-              if (isSeaPolice) {
-                return entry.key == 'RNADRES';
-              } else if (properties.containsKey('DEPART_NM')) {
-                return entry.key == 'SHIP_CNT' || entry.key == 'DEPART_NM';
-              } else {
-                return entry.key == '전화번호' ||
-                    entry.key == '주소' ||
-                    entry.key == '업소명';
-              }
-            }).map((entry) {
-              return Text('${entry.key}: ${entry.value}');
-            }).toList(),
+            children: infoWidgets,
           ),
           actions: <Widget>[
             TextButton(

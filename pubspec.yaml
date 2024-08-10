@@ -58,8 +58,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/datas/hospital.geojson
-    - assets/datas/police.geojson
     - assets/datas/ship.geojson
     - assets/datas/seaPolice.geojson
     - assets/datas/namhaHData.geojson
