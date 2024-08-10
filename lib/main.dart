@@ -43,6 +43,10 @@ class _MapPageState extends State<MapPage> {
   MapLatLng? _currentLocation;
   late MapZoomPanBehavior _zoomPanBehavior;
   bool _isLoading = true;
+  bool _showSeaPolice = true;
+  bool _showShipData = true;
+  bool _showHospitalData = true;
+  bool _showAccommodationData = true;
   final TextEditingController _searchController = TextEditingController();
   List<String> _allSuggestions = [];
 
@@ -62,6 +66,10 @@ class _MapPageState extends State<MapPage> {
   }
 
   Future<void> _initializeData() async {
+    setState(() {
+      _isLoading = true;
+    });
+
     await Future.wait([
       _loadGeoJson1(),
       _loadGeoJson2(),
@@ -239,8 +247,28 @@ class _MapPageState extends State<MapPage> {
     }
 
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Location not found')),
+      const SnackBar(content: Text('위치를 찾을 수 없습니다')),
     );
+  }
+
+  void _toggleCheckbox(bool? value, String layer) {
+    setState(() {
+      switch (layer) {
+        case 'SeaPolice':
+          _showSeaPolice = value ?? false;
+          break;
+        case 'ShipData':
+          _showShipData = value ?? false;
+          break;
+        case 'HospitalData':
+          _showHospitalData = value ?? false;
+          break;
+        case 'AccommodationData':
+          _showAccommodationData = value ?? false;
+          break;
+      }
+      _initializeData(); // Re-initialize data whenever a checkbox is toggled
+    });
   }
 
   @override
@@ -248,6 +276,12 @@ class _MapPageState extends State<MapPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter GeoJSON Map'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _initializeData, // Refresh button to reload the map data
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -275,7 +309,7 @@ class _MapPageState extends State<MapPage> {
                   controller: controller,
                   focusNode: focusNode,
                   decoration: InputDecoration(
-                    labelText: 'Search Location',
+                    labelText: '위치 검색',
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.search),
                       onPressed: () {
@@ -288,6 +322,61 @@ class _MapPageState extends State<MapPage> {
                   },
                 );
               },
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Checkbox(
+                        value: _showSeaPolice,
+                        onChanged: (value) {
+                          _toggleCheckbox(value, 'SeaPolice');
+                        },
+                      ),
+                      const Text('해양경찰서 데이터'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Checkbox(
+                        value: _showShipData,
+                        onChanged: (value) {
+                          _toggleCheckbox(value, 'ShipData');
+                        },
+                      ),
+                      const Text('항구 데이터'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Checkbox(
+                        value: _showHospitalData,
+                        onChanged: (value) {
+                          _toggleCheckbox(value, 'HospitalData');
+                        },
+                      ),
+                      const Text('병원 데이터'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Checkbox(
+                        value: _showAccommodationData,
+                        onChanged: (value) {
+                          _toggleCheckbox(value, 'AccommodationData');
+                        },
+                      ),
+                      const Text('숙박 데이터'),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -315,12 +404,24 @@ class _MapPageState extends State<MapPage> {
                                       _dataPoints3.length +
                                       _dataPoints4.length),
                               markerBuilder: (BuildContext context, int index) {
+                                int seaPoliceCount =
+                                    _showSeaPolice ? _dataPoints1.length : 0;
+                                int shipDataCount =
+                                    _showShipData ? _dataPoints2.length : 0;
+                                int hospitalDataCount =
+                                    _showHospitalData ? _dataPoints3.length : 0;
+                                int accommodationDataCount =
+                                    _showAccommodationData
+                                        ? _dataPoints4.length
+                                        : 0;
+
+                                int totalDataPoints = seaPoliceCount +
+                                    shipDataCount +
+                                    hospitalDataCount +
+                                    accommodationDataCount;
+
                                 if (_currentLocation != null &&
-                                    index ==
-                                        _dataPoints1.length +
-                                            _dataPoints2.length +
-                                            _dataPoints3.length +
-                                            _dataPoints4.length) {
+                                    index == totalDataPoints) {
                                   return MapMarker(
                                     latitude: _currentLocation!.latitude,
                                     longitude: _currentLocation!.longitude,
@@ -330,7 +431,10 @@ class _MapPageState extends State<MapPage> {
                                       height: 30,
                                     ),
                                   );
-                                } else if (index < _dataPoints1.length) {
+                                }
+
+                                if (_showSeaPolice &&
+                                    index < _dataPoints1.length) {
                                   return MapMarker(
                                     latitude: _dataPoints1[index].latitude,
                                     longitude: _dataPoints1[index].longitude,
@@ -346,10 +450,12 @@ class _MapPageState extends State<MapPage> {
                                       ),
                                     ),
                                   );
-                                } else if (index <
-                                    _dataPoints1.length + _dataPoints2.length) {
-                                  int adjustedIndex =
-                                      index - _dataPoints1.length;
+                                }
+
+                                if (_showShipData &&
+                                    index <
+                                        seaPoliceCount + _dataPoints2.length) {
+                                  int adjustedIndex = index - seaPoliceCount;
                                   return MapMarker(
                                     latitude:
                                         _dataPoints2[adjustedIndex].latitude,
@@ -367,13 +473,15 @@ class _MapPageState extends State<MapPage> {
                                       ),
                                     ),
                                   );
-                                } else if (index <
-                                    _dataPoints1.length +
-                                        _dataPoints2.length +
-                                        _dataPoints3.length) {
-                                  int adjustedIndex = index -
-                                      _dataPoints1.length -
-                                      _dataPoints2.length;
+                                }
+
+                                if (_showHospitalData &&
+                                    index <
+                                        seaPoliceCount +
+                                            shipDataCount +
+                                            _dataPoints3.length) {
+                                  int adjustedIndex =
+                                      index - seaPoliceCount - shipDataCount;
                                   return MapMarker(
                                     latitude:
                                         _dataPoints3[adjustedIndex].latitude,
@@ -391,11 +499,18 @@ class _MapPageState extends State<MapPage> {
                                       ),
                                     ),
                                   );
-                                } else {
+                                }
+
+                                if (_showAccommodationData &&
+                                    index <
+                                        seaPoliceCount +
+                                            shipDataCount +
+                                            hospitalDataCount +
+                                            _dataPoints4.length) {
                                   int adjustedIndex = index -
-                                      _dataPoints1.length -
-                                      _dataPoints2.length -
-                                      _dataPoints3.length;
+                                      seaPoliceCount -
+                                      shipDataCount -
+                                      hospitalDataCount;
                                   return MapMarker(
                                     latitude:
                                         _dataPoints4[adjustedIndex].latitude,
@@ -414,6 +529,12 @@ class _MapPageState extends State<MapPage> {
                                     ),
                                   );
                                 }
+
+                                return MapMarker(
+                                  latitude: 0,
+                                  longitude: 0,
+                                  child: Container(), // Return an empty marker
+                                );
                               },
                             ),
                           ],
@@ -487,7 +608,7 @@ class _MapPageState extends State<MapPage> {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Close'),
+              child: const Text('닫기'),
               onPressed: () {
                 Navigator.of(context).pop();
                 FocusScope.of(context).unfocus();
